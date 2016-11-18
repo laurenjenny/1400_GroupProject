@@ -6,14 +6,17 @@ public class TicTacToe
   
   void showBoard()
   {
+    //outputs the board to the console window
   }
   
   void determineWinner()
   {
+    //see who is going to wins
   }
   
-  void chooseSpace()
+  void chooseSpace(char symbol)
   {
+    //lets players choose what space they want to fill
   }
   
   
