@@ -5,7 +5,7 @@ package groupproject;
  */
 public class TicTacToe {
     
-      char[] board = new char[9];
+      String[] board = new String[9];
   
   String determineWinner(String [] values )
   {
