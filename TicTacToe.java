@@ -7,6 +7,11 @@ public class TicTacToe {
     
       String[] board = new String[9];
   
+      String[] getBoard()
+      {
+          return board;
+      }
+      
   String determineWinner()
   {
 
