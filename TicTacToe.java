@@ -7,7 +7,12 @@ public class TicTacToe {
     
       String[] board = new String[9];
   
-  String determineWinner(String [] values )
+      String[] getBoard()
+      {
+          return board;
+      }
+      
+  String determineWinner()
   {
 
       int [][] rows = 
@@ -27,10 +32,10 @@ public class TicTacToe {
       
       for (int i = 0; i < rows.length; i++)
       {
-          determine = values[rows[i][0]];
+          determine = board[rows[i][0]];
           
           for (int j = 0; j < rows[0].length; j++){
-            if (values[rows[i][j]].equals(determine))
+            if (board[rows[i][j]].equals(determine))
             {
               counter++;
             }
@@ -38,7 +43,7 @@ public class TicTacToe {
           }
           if (counter == 3)
           {
-              return values[rows[i][0]] + " is the winner!";
+              return board[rows[i][0]] + " is the winner!";
           }
           else 
               counter = 0;
@@ -46,12 +51,16 @@ public class TicTacToe {
      
       return "";
   }
-    String chooseSpace(String symbol, String [] values, int place)
+  
+    String chooseSpace(String symbol, int place)
   {
-      if (values[place].equals(""))
+      if (board[place].equals(""))
+      {
+          board[place] = symbol;
         return symbol;
+      }
       else 
-          return values[place];
+          return board[place];
   }
     
     
